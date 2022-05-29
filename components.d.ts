@@ -5,12 +5,16 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AlertHero: typeof import('./src/components/AlertHero.vue')['default']
+    Alerts: typeof import('./src/components/Alerts.vue')['default']
     AppHeader: typeof import('./src/components/AppHeader.vue')['default']
     'Icon:bx:bxMoon': typeof import('~icons/bx/bx-moon')['default']
     'Icon:bx:bxsMoon': typeof import('~icons/bx/bxs-moon')['default']
     'IconAkarIcons:githubFill': typeof import('~icons/akar-icons/github-fill')['default']
+    MainHero: typeof import('./src/components/MainHero.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TimerCount: typeof import('./src/components/TimerCount.vue')['default']
   }
 }
 

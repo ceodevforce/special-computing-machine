@@ -9,6 +9,7 @@ import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
 import { VitePWA } from 'vite-plugin-pwa';
 import VueI18n from '@intlify/vite-plugin-vue-i18n';
+import Markdown from 'vite-plugin-md'
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
@@ -86,6 +87,9 @@ export default defineConfig({
 			runtimeOnly: true,
 			compositionOnly: true,
 			include: [resolve(__dirname, 'locales/**')],
+		}),
+		Markdown({
+			 headEnabled: true,
 		}),
 	],
 	resolve: {
